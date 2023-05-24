@@ -1,0 +1,31 @@
+{
+  "name": "maxvalid",
+  "version": "1.0.0",
+  "description": "Comprehensive data validation functions for common data types",
+  "main": "index.js",
+  "scripts": {
+    "debug": "node --inspect-brk index.js"
+  },
+  "keywords": [
+    "validation",
+    "data types",
+    "email",
+    "URL",
+    "phone number",
+    "credit card",
+    "customizable",
+    "NPM package",
+    "development",
+    "comprehensive"
+  ],
+  "author": "Monowar Hussain",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techmonowar/maxvalid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/techmonowar/maxvalid/issues"
+  },
+  "homepage": "https://github.com/techmonowar/maxvalid#readme"
+}
