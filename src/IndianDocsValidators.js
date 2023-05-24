@@ -1,3 +1,9 @@
+
+// Add New Common Validation Functions Here
+
+
+
+// Validate PAN Card Number
 function validatePANCard(panCardNumber) {
     const panCardRegex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
     return panCardRegex.test(panCardNumber);

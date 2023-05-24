@@ -1,3 +1,6 @@
+// Add New Common Validation Functions Here
+
+
 // Validate email address
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

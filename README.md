@@ -148,7 +148,7 @@ MaxValid provides a wide range of validation functions for various data types. H
 - `validateSocialMediaUsername`: Validates a social media username.
 - And more...
 
-Please refer to the [documentation](https://github.com/techmonowar/maxvalid) for the full list of available validation functions.
+Please refer to the [documentation](https://maxvalid.js.org/documentation) for the full list of available validation functions.
 
 ## Contributing
 

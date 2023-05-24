@@ -6,7 +6,6 @@
   "scripts": {
     "debug": "nodemon --inspect-brk index.js",
     "test": "nodemon test/test.js"
-
   },
   "keywords": [
     "validation",
@@ -31,6 +30,7 @@
   },
   "homepage": "https://github.com/techmonowar/maxvalid#readme",
   "dependencies": {
+    "maxvalid": "^1.0.0",
     "nodemon": "^2.0.22"
   }
 }
