@@ -1,58 +1,162 @@
-# maxvalid
+# MaxValid
 
-`maxvalid` is an npm package that provides a comprehensive set of validation functions for common data types. It offers an easy and convenient way to validate various inputs, such as email addresses, URLs, phone numbers, credit card numbers, and more.
+MaxValid is an npm package that provides a comprehensive set of validation functions for common data types. It offers easy-to-use functions to validate email addresses, URLs, phone numbers, credit card numbers, and more. The package is designed to be customizable and extensible to accommodate different validation requirements.
 
 ## Installation
 
-To install the package, use npm:
+You can install MaxValid using npm:
 
+```shell
 npm install maxvalid
-
-
+```
 
 ## Usage
 
-Here's an example of how to use `maxvalid` to validate an email address and a URL:
+### CommonJS (Node.js) Usage
 
 ```javascript
-const maxvalid = require('maxvalid');
+const { validateEmail, validateURL } = require('maxvalid');
 
 const email = 'test@example.com';
-const isEmailValid = maxvalid.validateEmail(email);
-console.log(`Is email valid? ${isEmailValid}`);
+const isValidEmail = validateEmail(email);
+
+console.log(`Email ${email} is valid: ${isValidEmail}`);
 
 const url = 'https://www.example.com';
-const isURLValid = maxvalid.validateURL(url);
-console.log(`Is URL valid? ${isURLValid}`);```
-You can replace validateEmail and validateURL with any other available validation function from the maxvalid package based on your specific validation requirements.
+const isValidURL = validateURL(url);
 
-Available Validation Functions
-Here is a list of some of the available validation functions provided by maxvalid:
+console.log(`URL ${url} is valid: ${isValidURL}`);
+```
 
-validateEmail: Validates an email address.
-validateURL: Validates a URL.
-validatePhone: Validates a phone number.
-validateCreditCard: Validates a credit card number.
-...
-Please refer to the source code or documentation for the complete list of available validation functions and their usage.
+### React Usage
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+```jsx
+import React from 'react';
+import { validateEmail } from 'maxvalid';
 
+function App() {
+  const email = 'test@example.com';
+  const isValidEmail = validateEmail(email);
 
+  return (
+    <div>
+      <h1>MaxValid React Example</h1>
+      <p>Email {email} is valid: {isValidEmail.toString()}</p>
+    </div>
+  );
+}
 
-Example Use Case:
+export default App;
+```
 
-```javascript
-const maxvalid = require('maxvalid');
+### Vue.js Usage
 
-const email = 'test@example.com';
-const isEmailValid = maxvalid.validateEmail(email);
-console.log(`Is email valid? ${isEmailValid}`);
+```vue
+<template>
+  <div>
+    <h1>MaxValid Vue.js Example</h1>
+    <p>Email {{ email }} is valid: {{ isValidEmail.toString() }}</p>
+  </div>
+</template>
 
-const url = 'https://www.example.com';
-const isURLValid = maxvalid.validateURL(url);
-console.log(`Is URL valid? ${isURLValid}`);```
-This example demonstrates how to use the maxvalid package to validate an email address and a URL. Replace the email and url variables with your own data, and adjust the validation functions as needed.
+<script>
+import { validateEmail } from 'maxvalid';
 
-Remember to install the maxvalid package using npm install maxvalid before running the example code.
+export default {
+  data() {
+    return {
+      email: 'test@example.com',
+      isValidEmail: false,
+    };
+  },
+  mounted() {
+    this.isValidEmail = validateEmail(this.email);
+  },
+};
+</script>
+```
+
+### Angular Usage
+
+```typescript
+import { Component } from '@angular/core';
+import { validateEmail } from 'maxvalid';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <h1>MaxValid Angular Example</h1>
+    <p>Email {{ email }} is valid: {{ isValidEmail.toString() }}</p>
+  `,
+})
+export class AppComponent {
+  email = 'test@example.com';
+  isValidEmail = validateEmail(this.email);
+}
+```
+
+### Vanilla JavaScript Usage
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MaxValid Vanilla JavaScript Example</title>
+</head>
+<body>
+  <h1>MaxValid Vanilla JavaScript Example</h1>
+  <script src="path/to/maxvalid.js"></script>
+  <script>
+    const email = 'test@example.com';
+    const isValidEmail = MaxValid.validateEmail(email);
+
+    const emailElement = document.createElement('p');
+    emailElement.textContent = `Email ${email} is valid: ${isValidEmail.toString()}`;
+    document.body.appendChild(emailElement);
+  </script>
+</body>
+</html>
+```
+
+Make sure to replace `'path/to/maxvalid.js'` with the actual path to the MaxValid library file.
+
+## Available Validation Functions
+
+MaxValid provides a wide range of validation functions for various data types. Here are some of the available functions:
+
+- `validateEmail`: Validates an email address.
+- `validateURL`: Validates a URL.
+- `validatePhoneNumber`: Validates a phone number.
+- `validateCreditCardNumber`: Validates a credit card number.
+- `validateUsername`: Validates a username.
+- `validatePassword`: Validates a password.
+-
+
+ `validateDate`: Validates a date.
+- `validateIPAddress`: Validates an IP address.
+- `validateColorCode`: Validates a hexadecimal color code.
+- `validateSSN`: Validates a social security number (SSN).
+- `validatePostalCode`: Validates a postal code.
+- `validatePassportNumber`: Validates a passport number.
+- `validateCurrency`: Validates a currency.
+- `validateHexadecimalNumber`: Validates a hexadecimal number.
+- `validateMACAddress`: Validates a MAC address.
+- `validateIBAN`: Validates an IBAN (International Bank Account Number).
+- `validateCVV`: Validates a credit card CVV (Card Verification Value) code.
+- `validateISBN`: Validates an ISBN (International Standard Book Number).
+- `validateUUID`: Validates a UUID (Universally Unique Identifier).
+- `validateSocialMediaUsername`: Validates a social media username.
+- And more...
+
+Please refer to the [documentation](https://github.com/yourusername/maxvalid) for the full list of available validation functions.
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions, improvements, or additional validation functions to add, feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/yourusername/maxvalid).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+```
+
+Make sure to replace `yourusername` with your actual GitHub username, adjust the file paths and names accordingly, and include any additional sections or information you find necessary for your package.

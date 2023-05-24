@@ -4,7 +4,9 @@
   "description": "Comprehensive data validation functions for common data types",
   "main": "index.js",
   "scripts": {
-    "debug": "node --inspect-brk index.js"
+    "debug": "nodemon --inspect-brk index.js",
+    "test": "nodemon test.js"
+
   },
   "keywords": [
     "validation",
@@ -27,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/techmonowar/maxvalid/issues"
   },
-  "homepage": "https://github.com/techmonowar/maxvalid#readme"
+  "homepage": "https://github.com/techmonowar/maxvalid#readme",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
