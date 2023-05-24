@@ -1,58 +1,70 @@
 # maxvalid
 
+[![npm version](https://img.shields.io/npm/v/maxvalid.svg)](https://www.npmjs.com/package/maxvalid)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 `maxvalid` is an npm package that provides a comprehensive set of validation functions for common data types. It offers an easy and convenient way to validate various inputs, such as email addresses, URLs, phone numbers, credit card numbers, and more.
 
 ## Installation
 
-To install the package, use npm:
+Install the `maxvalid` package using npm:
 
+```shell
 npm install maxvalid
-
-
+```
 
 ## Usage
 
-Here's an example of how to use `maxvalid` to validate an email address and a URL:
+### CommonJS (Node.js) Syntax
 
 ```javascript
 const maxvalid = require('maxvalid');
+```
 
-const email = 'test@example.com';
-const isEmailValid = maxvalid.validateEmail(email);
-console.log(`Is email valid? ${isEmailValid}`);
-
-const url = 'https://www.example.com';
-const isURLValid = maxvalid.validateURL(url);
-console.log(`Is URL valid? ${isURLValid}`);```
-You can replace validateEmail and validateURL with any other available validation function from the maxvalid package based on your specific validation requirements.
-
-Available Validation Functions
-Here is a list of some of the available validation functions provided by maxvalid:
-
-validateEmail: Validates an email address.
-validateURL: Validates a URL.
-validatePhone: Validates a phone number.
-validateCreditCard: Validates a credit card number.
-...
-Please refer to the source code or documentation for the complete list of available validation functions and their usage.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-
-
-Example Use Case:
+### ES Modules (import) Syntax
 
 ```javascript
-const maxvalid = require('maxvalid');
+import maxvalid from 'maxvalid';
+```
 
-const email = 'test@example.com';
-const isEmailValid = maxvalid.validateEmail(email);
-console.log(`Is email valid? ${isEmailValid}`);
+### Available Validation Functions
 
-const url = 'https://www.example.com';
-const isURLValid = maxvalid.validateURL(url);
-console.log(`Is URL valid? ${isURLValid}`);```
-This example demonstrates how to use the maxvalid package to validate an email address and a URL. Replace the email and url variables with your own data, and adjust the validation functions as needed.
+Here are the available validation functions provided by `maxvalid`:
 
-Remember to install the maxvalid package using npm install maxvalid before running the example code.
+- `validateEmail`: Validates an email address.
+- `validateURL`: Validates a URL.
+- `validatePhone`: Validates a phone number.
+- `validateCreditCard`: Validates a credit card number.
+- `validateUsername`: Validates a username.
+- `validatePassword`: Validates a password.
+- `validateDate`: Validates a date.
+- `validateIPAddress`: Validates an IP address.
+- `validateColorCode`: Validates a color code.
+- `validateSSN`: Validates a Social Security Number (SSN).
+- `validatePostalCode`: Validates a postal code.
+- `validatePassportNumber`: Validates a passport number.
+- `validateCurrency`: Validates a currency amount.
+- `validateHexadecimalNumber`: Validates a hexadecimal number.
+- `validateMACAddress`: Validates a MAC address.
+- `validateIBAN`: Validates an IBAN (International Bank Account Number).
+- `validateCVV`: Validates a CVV (Card Verification Value).
+- `validateISBN`: Validates an ISBN (International Standard Book Number).
+- `validateUUID`: Validates a UUID (Universally Unique Identifier).
+- `validateSocialMediaUsername`: Validates a social media username.
+- `validateUSPostalCode`: Validates a US postal code.
+- `validateUKPostalCode`: Validates a UK postal code.
+- `validateCanadianPostalCode`: Validates a Canadian postal code.
+- `validateAustralianPostalCode`: Validates an Australian postal code.
+- `validateGermanPostalCode`: Validates a German postal code.
+- `validatePAN`: Validates a PAN (Permanent Account Number) card number.
+- `validateAadhaar`: Validates an Aadhaar card number.
+- `validateVoterID`: Validates a Voter ID card number.
+
+Refer to the source code or documentation for detailed usage instructions for each validation function.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```
+
+Feel free to customize the content and formatting of the README.md file as per your preferences.
