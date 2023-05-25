@@ -1,9 +1,91 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import Codehighlight from '../../components/codeHighlighter'
 
 const inter = Inter({ subsets: ['latin'] })
 
+
+//Example Normal Javascript Usage
+const normaljs = `const { validateEmail, validateURL } = require('maxvalid');
+
+const email = 'test@example.com';
+const isValidEmail = validateEmail(email);
+
+console.log(\`Email \${email} is valid: \${isValidEmail}\`);
+
+const url = 'https://www.example.com';
+const isValidURL = validateURL(url);
+
+console.log(\`URL \${url} is valid: \${isValidURL}\`);`;
+
+//Example Reactjs Usage
+
+const reactjs = `import React from 'react';
+import { validateEmail } from 'maxvalid';
+
+function App() {
+  const email = 'test@example.com';
+  const isValidEmail = validateEmail(email);
+
+  return (
+    <div>
+      <h1>MaxValid React Example</h1>
+      <p>Email {email} is valid: {isValidEmail.toString()}</p>
+    </div>
+  );
+}
+
+export default App;`;
+
+
+//Example Vueue.js Usage
+
+const vueuejs = `<template>
+<div>
+  <h1>MaxValid Vue.js Example</h1>
+  <p>Email {{ email }} is valid: {{ isValidEmail.toString() }}</p>
+</div>
+</template>
+
+<script>
+import { validateEmail } from 'maxvalid';
+
+export default {
+data() {
+  return {
+    email: 'test@example.com',
+    isValidEmail: false,
+  };
+},
+mounted() {
+  this.isValidEmail = validateEmail(this.email);
+},
+};
+</script>`;
+
+//Example Angularjs Usage
+
+const angularjs = `import { Component } from '@angular/core';
+import { validateEmail } from 'maxvalid';
+
+@Component({
+  selector: 'app-root',
+  template: \`
+    <h1>MaxValid Angular Example</h1>
+    <p>Email {{ email }} is valid: {{ isValidEmail.toString() }}</p>
+  \`,
+})
+export class AppComponent {
+  email = 'test@example.com';
+  isValidEmail = validateEmail(this.email);
+}`;
+
+
 export default function Home() {
+
+  
+
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -44,11 +126,11 @@ export default function Home() {
         <h1 className='mt-8 text-5xl mb-8 lg:text-6xl font-extrabold'>maxvalid</h1>
       </div>
 
-      <p className='text-justify bg-white border-gray-800 bg-gradient-to-tr bg-slate-400/20  rounded-lg p-4 text-lg mb-8 '>MaxValid is an <code> npm package</code> that provides a comprehensive set of validation functions for common data types. It offers easy-to-use functions to validate email addresses, URLs, phone numbers, credit card numbers, and more. The package is designed to be customizable and extensible to accommodate different validation requirements.</p>
+      <p className='text-justify bg-white backdrop-blur-sm border-gray-900 bg-gradient-to-tr   rounded-lg p-4 text-lg mb-8 '>MaxValid is an <code> npm package</code> that provides a comprehensive set of validation functions for common data types. It offers easy-to-use functions to validate email addresses, URLs, phone numbers, credit card numbers, and more. The package is designed to be customizable and extensible to accommodate different validation requirements.</p>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-3 lg:text-center">
         <a
-         href='/Documentation'
+         href='/documentation'
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-400 hover:dark:bg-neutral-400/30"
           rel="noopener noreferrer"
         >
@@ -66,10 +148,9 @@ export default function Home() {
         </a>
 
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
+          href="#functions"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-400 hover:dark:bg-neutral-400/30"
-          target="_blank"
-          rel="noopener noreferrer"
+         
         >
           <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
             Learn{' '}
@@ -122,7 +203,25 @@ export default function Home() {
           </p>
         </a>
       </div>
-      
+      <h2 className='mb-8 mt-1 font-bold text-3xl '>Usage Examples</h2>
+      <div className='lg:grid w-full flex-grow  lg:grid-cols-2 gap-4'> 
+      <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
+      <h3 className='font-bold text-lg'>CommonJS (Node.js) Usage</h3>
+        <Codehighlight className='rounded-md'  language='javascript' code={normaljs} /></div>
+       
+        <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
+        <h3 className='font-bold text-lg'>React Usage</h3>
+       <Codehighlight  language='javascript' code={reactjs} /></div>
+
+
+       <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
+       <h3 className='font-bold text-lg'>Vue.js Usage</h3>
+       <Codehighlight  language='javascript' code={vueuejs} /></div>
+
+       <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
+       <h3 className='font-bold text-lg'>Angular Usage</h3>
+       <Codehighlight  language='javascript' code={angularjs} /></div>
+      </div>
     </main>
   )
 }
