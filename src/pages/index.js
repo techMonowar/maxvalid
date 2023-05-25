@@ -130,7 +130,7 @@ export default function Home() {
 
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-3 lg:text-center">
         <a
-         href='/documentation'
+         href='#documentation'
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-400 hover:dark:bg-neutral-400/30"
           rel="noopener noreferrer"
         >
