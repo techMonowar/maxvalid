@@ -1,159 +1,38 @@
-# MaxValid
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-MaxValid is an npm package that provides a comprehensive set of validation functions for common data types. It offers easy-to-use functions to validate email addresses, URLs, phone numbers, credit card numbers, and more. The package is designed to be customizable and extensible to accommodate different validation requirements.
+## Getting Started
 
-## Installation
+First, run the development server:
 
-You can install MaxValid using npm:
-
-```shell
-npm install maxvalid
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-## Usage
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### CommonJS (Node.js) Usage
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-```javascript
-const { validateEmail, validateURL } = require('maxvalid');
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-const email = 'test@example.com';
-const isValidEmail = validateEmail(email);
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-console.log(`Email ${email} is valid: ${isValidEmail}`);
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-const url = 'https://www.example.com';
-const isValidURL = validateURL(url);
+## Learn More
 
-console.log(`URL ${url} is valid: ${isValidURL}`);
-```
+To learn more about Next.js, take a look at the following resources:
 
-### React Usage
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```jsx
-import React from 'react';
-import { validateEmail } from 'maxvalid';
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-function App() {
-  const email = 'test@example.com';
-  const isValidEmail = validateEmail(email);
+## Deploy on Vercel
 
-  return (
-    <div>
-      <h1>MaxValid React Example</h1>
-      <p>Email {email} is valid: {isValidEmail.toString()}</p>
-    </div>
-  );
-}
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-export default App;
-```
-
-### Vue.js Usage
-
-```vue
-<template>
-  <div>
-    <h1>MaxValid Vue.js Example</h1>
-    <p>Email {{ email }} is valid: {{ isValidEmail.toString() }}</p>
-  </div>
-</template>
-
-<script>
-import { validateEmail } from 'maxvalid';
-
-export default {
-  data() {
-    return {
-      email: 'test@example.com',
-      isValidEmail: false,
-    };
-  },
-  mounted() {
-    this.isValidEmail = validateEmail(this.email);
-  },
-};
-</script>
-```
-
-### Angular Usage
-
-```typescript
-import { Component } from '@angular/core';
-import { validateEmail } from 'maxvalid';
-
-@Component({
-  selector: 'app-root',
-  template: `
-    <h1>MaxValid Angular Example</h1>
-    <p>Email {{ email }} is valid: {{ isValidEmail.toString() }}</p>
-  `,
-})
-export class AppComponent {
-  email = 'test@example.com';
-  isValidEmail = validateEmail(this.email);
-}
-```
-
-### Vanilla JavaScript Usage
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>MaxValid Vanilla JavaScript Example</title>
-</head>
-<body>
-  <h1>MaxValid Vanilla JavaScript Example</h1>
-  <script src="path/to/maxvalid.js"></script>
-  <script>
-    const email = 'test@example.com';
-    const isValidEmail = MaxValid.validateEmail(email);
-
-    const emailElement = document.createElement('p');
-    emailElement.textContent = `Email ${email} is valid: ${isValidEmail.toString()}`;
-    document.body.appendChild(emailElement);
-  </script>
-</body>
-</html>
-```
-
-Make sure to replace `'path/to/maxvalid.js'` with the actual path to the MaxValid library file.
-
-## Available Validation Functions
-
-MaxValid provides a wide range of validation functions for various data types. Here are some of the available functions:
-
-- `validateEmail`: Validates an email address.
-- `validateURL`: Validates a URL.
-- `validatePhoneNumber`: Validates a phone number.
-- `validateCreditCardNumber`: Validates a credit card number.
-- `validateUsername`: Validates a username.
-- `validatePassword`: Validates a password.
--
-
- `validateDate`: Validates a date.
-- `validateIPAddress`: Validates an IP address.
-- `validateColorCode`: Validates a hexadecimal color code.
-- `validateSSN`: Validates a social security number (SSN).
-- `validatePostalCode`: Validates a postal code.
-- `validatePassportNumber`: Validates a passport number.
-- `validateCurrency`: Validates a currency.
-- `validateHexadecimalNumber`: Validates a hexadecimal number.
-- `validateMACAddress`: Validates a MAC address.
-- `validateIBAN`: Validates an IBAN (International Bank Account Number).
-- `validateCVV`: Validates a credit card CVV (Card Verification Value) code.
-- `validateISBN`: Validates an ISBN (International Standard Book Number).
-- `validateUUID`: Validates a UUID (Universally Unique Identifier).
-- `validateSocialMediaUsername`: Validates a social media username.
-- And more...
-
-Please refer to the [documentation](https://maxvalid.js.org/documentation) for the full list of available validation functions.
-
-## Contributing
-
-Contributions are welcome! If you have any suggestions, improvements, or additional validation functions to add, feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/techmonowar/maxvalid).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
