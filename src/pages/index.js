@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script';
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Codehighlight from '../../components/codeHighlighter'
@@ -90,8 +91,76 @@ export default function Home() {
   return (
     <>
      <Head> 
-      <title>Maxvalid - a package for maximum validation</title>
+     <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="MaxValid is a powerful npm package for validating various types of data." />
+      <meta name="keywords" content="npm package, validation, data validation, form validation" />
+      <meta name="author" content="Monowar Hussain" />
+      <meta name="robots" content="index, follow" />
+      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+      <title>MaxValid - Your NPM Validation Package</title>
       </ Head>
+
+        {/* Google Analytics */}
+        <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-DJTHS4TWXH`}
+      />
+      <Script
+        id="google-analytics-inline"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DJTHS4TWXH');
+          `,
+        }}
+      />
+
+      {/* Structured Data / Schema.org */}
+      <Script
+        id="schema"
+        strategy="afterInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+            {
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "MaxValid",
+              "description": "MaxValid is a powerful npm package for validating various types of data.",
+              "url": "https://maxvalid.js.org/",
+              "author": {
+                "@type": "Person",
+                "name": "Monowar Hussain",
+                "sameAs": "https://linkedin.com/in/techmonowar"
+              },
+              "applicationCategory": "Library",
+              "operatingSystem": "Platform Independent",
+              "softwareVersion": "1.0.0",
+              "applicationSuite": "MaxValid",
+              "downloadUrl": "https://www.npmjs.com/package/maxvalid",
+              "keywords": "npm package, validation, data validation, form validation",
+              "screenshot": "https://maxvalid.js.org/screenshot.png",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://maxvalid.js.org/"
+              }
+              "sameAs": "https://github.com/techmonowar/maxvalid"
+            }
+          `,
+        }}
+      />
+      
+      
 
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
