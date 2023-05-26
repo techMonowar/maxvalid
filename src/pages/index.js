@@ -195,8 +195,11 @@ export default function Home() {
           </p>
         </a>
       </div>
+
+      {/* Usage Examples  */}
+
       <h2 className='mb-8 mt-1 font-bold text-3xl '>Usage Examples</h2>
-      <div className='lg:grid w-full   lg:grid-cols-2 gap-4'> 
+      <div className='lg:grid w-full mb-6  lg:grid-cols-2 gap-4'> 
       <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
       <h3 className='font-bold text-lg'>CommonJS (Node.js) Usage</h3>
         <Codehighlight className='rounded-md'  language='javascript' code={normaljs} /></div>
@@ -210,10 +213,41 @@ export default function Home() {
        <h3 className='font-bold text-lg'>Vue.js Usage</h3>
        <Codehighlight  language='javascript' code={vueuejs} /></div>
 
-       <div className='rounded-md mb backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
+       <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
        <h3 className='font-bold text-lg'>Angular Usage</h3>
        <Codehighlight  language='javascript' code={angularjs} /></div>
       </div>
+
+
+{/* Validation Functions*/}
+
+      <div id='functions' className='rounded-md  flex flex-col  text-center gap-4 text-lg w-full backdrop-blur-md bg-white/30 p-8 shadow-md shadow-white-400  border-gray-500'>
+       <h3 className='font-bold text-center text-2xl mb-4'>Available Validation Functions</h3>
+       <p className='opacity-50 text center'>MaxValid provides a wide range of validation functions for various data types. Here are some of the available functions:</p>
+   <div className=' flex flex-wrap flex-grow  gap-4 text-left w-full '>  
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateEmail</code>: Validates an email address.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateURL</code>: Validates a URL.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validatePhoneNumber</code>: Validates a phone number.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateCreditCardNumber</code>: Validates a credit card number.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateUsername</code>: Validates a username.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validatePassword</code>: Validates a password.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateDate</code>: Validates a date.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateIPAddress</code>: Validates an IP address.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateColorCode</code>: Validates a hexadecimal color code.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateSSN</code>: Validates a social security number (SSN).</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validatePostalCode</code>: Validates a postal code.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validatePassportNumber</code>: Validates a passport number.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateCurrency</code>: Validates a currency.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateHexadecimalNumber</code>: Validates a hexadecimal number.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateMACAddress</code>: Validates a MAC address.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateIBAN</code>: Validates an IBAN (International Bank Account Number).</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateCVV</code>: Validates a credit card CVV (Card Verification Value) code.</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateISBN</code>: Validates an ISBN (International Standard Book Number).</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateUUID</code>: Validates a UUID (Universally Unique Identifier).</li>
+<li className='text-xl bg-white/50 w-fit list-none hover:bg-white p-2 rounded-md'><code className="text-green-600 mr-2 hover:bg-yellow-200 p-2 rounded-lg hover:text-black ">validateSocialMediaUsername</code>: Validates a social media username.</li>
+
+</div>  
+</div>
 
   {/* <UsageExamples /> */}
 
