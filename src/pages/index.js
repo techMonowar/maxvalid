@@ -108,6 +108,8 @@ export default function Home() {
         src={`https://www.googletagmanager.com/gtag/js?id=G-DJTHS4TWXH`}
       />
       <Script
+
+      
         id="google-analytics-inline"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -119,6 +121,24 @@ export default function Home() {
           `,
         }}
       />
+
+        {/* Google Tag Manager */}
+    <Script
+    id="tagmanager"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{
+        __html: `
+          (function(w,d,s,l,i) {
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-K9CT97W');
+        `,
+      }}
+    />
+    {/* End Google Tag Manager */}
 
       {/* Structured Data / Schema.org */}
       <Script
@@ -160,7 +180,10 @@ export default function Home() {
         }}
       />
       
-      
+    
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9CT97W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
