@@ -96,7 +96,7 @@ export default function Home() {
 
    
 
-    <main className="flex  min-h-screen flex-col items-center justify-between lg:p-24 pt-20 p-8">
+    <main className="flex  min-h-screen flex-col items-center justify-between lg:p-24 pt-20 p-2">
       <div className="z-10 lg:w-full w-fit max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0  flex  w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-400 dark:bg-zinc-400/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-300/30">
           Get started by&nbsp;
@@ -249,8 +249,8 @@ export default function Home() {
 
 
 
-<div id='how-to' className="mt-10 mb-30 flex bg-white/40 rounded-lg p-8 flex-col gap-4 text-xl  w-full">
-        <h1 className='text-center text-3xl font-bold mb-4'>How to use ?</h1>
+<div id='how-to' className="mt-10 mb-30 flex bg-white/40 rounded-lg p-2 flex-col gap-4 text-xl  w-full">
+        <h1 className='text-center text-xl font-bold mb-4'>How to use ?</h1>
         Step 1: Install MaxValid
         <div className='bg-white rounded-md'>
         <Codehighlight  language='javascript' code={`npm install maxvalid`} /></div>
