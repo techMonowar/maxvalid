@@ -80,7 +80,7 @@ const UsageExamples = () => {
   return (
    <>
        <h2 className='mb-8 mt-1 font-bold text-3xl '>Usage Examples</h2>
-      <div className='lg:grid w-full flex-grow  lg:grid-cols-2 gap-4'> 
+      <div className='lg:grid w-full   lg:grid-cols-2 gap-4'> 
       <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
       <h3 className='font-bold text-lg'>CommonJS (Node.js) Usage</h3>
         <Codehighlight className='rounded-md'  language='javascript' code={normaljs} /></div>
@@ -94,7 +94,7 @@ const UsageExamples = () => {
        <h3 className='font-bold text-lg'>Vue.js Usage</h3>
        <Codehighlight  language='javascript' code={vueuejs} /></div>
 
-       <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
+       <div className='rounded-md mb backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
        <h3 className='font-bold text-lg'>Angular Usage</h3>
        <Codehighlight  language='javascript' code={angularjs} /></div>
       </div>
