@@ -6,7 +6,6 @@ import Schema from '../../components/schema'
 // import UsageExamples from '../../components/UsageExamples'
 import GoogleTagManagerNoScript from '../../components/GoogleTagNoScript'
 import Codehighlight from '../../components/codeHighlighter'
-import HowToUse from '../../components/HowToUse'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -246,8 +245,55 @@ export default function Home() {
 
 </div>  
 </div>
-       <HowToUse />
+       
+
+
+
+<div id='how-to' className="mt-10 mb-30 flex bg-white/40 rounded-lg p-8 flex-col gap-4 text-xl  w-full">
+        <h1 className='text-center text-3xl font-bold mb-4'>How to use ?</h1>
+        Step 1: Install MaxValid
+        <div className='bg-white rounded-md'>
+        <Codehighlight  language='javascript' code={`npm install maxvalid`} /></div>
+        
+        Step 2: Import MaxValid into your project
+        <div className='bg-white rounded-md'>
+        <Codehighlight  language='javascript' code={`const MaxValid = require('maxvalid');`} /></div>
+        OR
+        <div className='bg-white rounded-md'>
+        <Codehighlight  language='javascript' code={`import { validateEmail } from 'maxvalid';');`} /></div>
+        
+        Step 3: Now use in your code
+        <div className='bg-white rounded-md'>
+        <Codehighlight  language='javascript' code={`function App() {
+          const email = 'test@example.com';
+          const isValidEmail = validateEmail(email);
+        
+          return (
+            <div>
+              <h1>MaxValid React Example</h1>
+              <p>Email {email} is valid: {isValidEmail.toString()}</p>
+            </div>
+          );
+        }');`} /></div>
+        <div className='bg-white rounded-md'>
+        <Codehighlight  language='javascript' code={`const url = 'https://www.example.com';
+        const isValidURL = validateURL(url);
+        
+        console.log(\`URL \${url} is valid: \${isValidURL}\`);`} /></div>
+        
+        
+        
+      <p className='text-xl font-normal opacity-60 '> That&apos;s it! You have now successfully used MaxValid to validate data in your project. Make sure to customize the validation rules according to your specific requirements.
+        
+        For more advanced usage and additional validation rules, please refer to the MaxValid documentation available at GitHub - MaxValid Documentation.
+        
+        If you encounter any issues or have questions, feel free to refer to the MaxValid GitHub repository GitHub - MaxValid and the provided contribution guide GitHub - MaxValid Contribution Guide for assistance.
+        
+        Happy coding with MaxValid!</p>
+            </div>
+            
     </main>
+    <p className='text-center opacity-50 mb-4 font-bold text-sm'>It is an Open Source Project Released in 2023 by <a href="https://instagram.com/techmonowar">Monowar Hussain</a></p>
     </>
   )
 }
