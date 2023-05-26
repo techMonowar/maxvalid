@@ -1,191 +1,24 @@
-import Head from 'next/head'
-import Script from 'next/script';
+import Header from '../../components/Header'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Codehighlight from '../../components/codeHighlighter'
+import Analytics from '../../components/analytics'
+import Schema from '../../components/schema'
+import UsageExamples from '../../components/UsageExamples'
+import GoogleTagManagerNoScript from '../../components/GoogleTagNoScript'
 
 const inter = Inter({ subsets: ['latin'] })
 
-
-//Example Normal Javascript Usage
-const normaljs = `const { validateEmail, validateURL } = require('maxvalid');
-
-const email = 'test@example.com';
-const isValidEmail = validateEmail(email);
-
-console.log(\`Email \${email} is valid: \${isValidEmail}\`);
-
-const url = 'https://www.example.com';
-const isValidURL = validateURL(url);
-
-console.log(\`URL \${url} is valid: \${isValidURL}\`);`;
-
-//Example Reactjs Usage
-
-const reactjs = `import React from 'react';
-import { validateEmail } from 'maxvalid';
-
-function App() {
-  const email = 'test@example.com';
-  const isValidEmail = validateEmail(email);
-
-  return (
-    <div>
-      <h1>MaxValid React Example</h1>
-      <p>Email {email} is valid: {isValidEmail.toString()}</p>
-    </div>
-  );
-}
-
-export default App;`;
-
-
-//Example Vueue.js Usage
-
-const vueuejs = `<template>
-<div>
-  <h1>MaxValid Vue.js Example</h1>
-  <p>Email {{ email }} is valid: {{ isValidEmail.toString() }}</p>
-</div>
-</template>
-
-<script>
-import { validateEmail } from 'maxvalid';
-
-export default {
-data() {
-  return {
-    email: 'test@example.com',
-    isValidEmail: false,
-  };
-},
-mounted() {
-  this.isValidEmail = validateEmail(this.email);
-},
-};
-</script>`;
-
-//Example Angularjs Usage
-
-const angularjs = `import { Component } from '@angular/core';
-import { validateEmail } from 'maxvalid';
-
-@Component({
-  selector: 'app-root',
-  template: \`
-    <h1>MaxValid Angular Example</h1>
-    <p>Email {{ email }} is valid: {{ isValidEmail.toString() }}</p>
-  \`,
-})
-export class AppComponent {
-  email = 'test@example.com';
-  isValidEmail = validateEmail(this.email);
-}`;
-
-
 export default function Home() {
-
-  
-
-
   return (
     <>
-     <Head> 
-     <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="MaxValid is a powerful npm package for validating various types of data." />
-      <meta name="keywords" content="npm package, validation, data validation, form validation" />
-      <meta name="author" content="Monowar Hussain" />
-      <meta name="robots" content="index, follow" />
-      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-      <title>MaxValid - Your NPM Validation Package</title>
-      </ Head>
+    <Header />
+    <Analytics />
+    <Schema />
+  <GoogleTagManagerNoScript />
 
-        {/* Google Analytics */}
-        <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-DJTHS4TWXH`}
-      />
-      <Script
+   
 
-      
-        id="google-analytics-inline"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-DJTHS4TWXH');
-          `,
-        }}
-      />
-
-        {/* Google Tag Manager */}
-    <Script
-    id="tagmanager"
-      strategy="afterInteractive"
-      dangerouslySetInnerHTML={{
-        __html: `
-          (function(w,d,s,l,i) {
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-K9CT97W');
-        `,
-      }}
-    />
-    {/* End Google Tag Manager */}
-
-      {/* Structured Data / Schema.org */}
-      <Script
-        id="schema"
-        strategy="afterInteractive"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `
-            {
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              "name": "MaxValid",
-              "description": "MaxValid is a powerful npm package for validating various types of data.",
-              "url": "https://maxvalid.js.org/",
-              "author": {
-                "@type": "Person",
-                "name": "Monowar Hussain",
-                "sameAs": "https://linkedin.com/in/techmonowar"
-              },
-              "applicationCategory": "Library",
-              "operatingSystem": "Platform Independent",
-              "softwareVersion": "1.0.0",
-              "applicationSuite": "MaxValid",
-              "downloadUrl": "https://www.npmjs.com/package/maxvalid",
-              "keywords": "npm package, validation, data validation, form validation",
-              "screenshot": "https://maxvalid.js.org/screenshot.png",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-              },
-              "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://maxvalid.js.org/"
-              }
-              "sameAs": "https://github.com/techmonowar/maxvalid"
-            }
-          `,
-        }}
-      />
-      
-    
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9CT97W"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 pt-20 p-4">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-400 dark:bg-zinc-400/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-300/30">
           Get started by - &nbsp;
@@ -263,24 +96,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
         </a>
 
-        {/* <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a> */}
+       
 
         <a
           href="https://github.com/techMonowar/maxvalid/blob/master/CONTRIBUTING.md"
@@ -301,25 +117,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
         </a>
       </div>
-      <h2 className='mb-8 mt-1 font-bold text-3xl '>Usage Examples</h2>
-      <div className='lg:grid w-full flex-grow  lg:grid-cols-2 gap-4'> 
-      <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
-      <h3 className='font-bold text-lg'>CommonJS (Node.js) Usage</h3>
-        <Codehighlight className='rounded-md'  language='javascript' code={normaljs} /></div>
-       
-        <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
-        <h3 className='font-bold text-lg'>React Usage</h3>
-       <Codehighlight  language='javascript' code={reactjs} /></div>
 
 
-       <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
-       <h3 className='font-bold text-lg'>Vue.js Usage</h3>
-       <Codehighlight  language='javascript' code={vueuejs} /></div>
+  <UsageExamples />
 
-       <div className='rounded-md backdrop-blur-md bg-white/30 p-4 shadow-md shadow-white-400  border-gray-500'>
-       <h3 className='font-bold text-lg'>Angular Usage</h3>
-       <Codehighlight  language='javascript' code={angularjs} /></div>
-      </div>
+
     </main>
     </>
   )
