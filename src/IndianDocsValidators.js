@@ -5,7 +5,8 @@
 
 // Validate PAN Card Number
 function validatePANCard(panCardNumber) {
-    const panCardRegex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+    const panCardRegex = /^[A-Z]{3}[PCHABGJLFT]{1}[A-Z]{1}[0-9]{4}[A-Z]{1}$/; 
+    //According to: https://incometaxindia.gov.in/Forms/tps/1.Permanent%20Account%20Number%20(PAN).pdf
     return panCardRegex.test(panCardNumber);
   }
   
