@@ -20,10 +20,16 @@ function validatePANCard(panCardNumber) {
     const voterIDCardRegex = /^[A-Z]{3}\d{7}$/;
     return voterIDCardRegex.test(voterIDCardNumber);
   }
-
+//Drivig licence validator
+function validateDL(drivingLicenceNumber){
+    const drivingLicenceRegex = /^(([A-Z]{2}[0-9]{2})( )|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])[0-9]{7}$/; 
+    //Stirng accpeted will be AS24-20230000000 or AS24 20230000000 and any other format will be rejected.
+    return drivingLicenceRegex.test(drivingLicenceNumber);
+}
   // Export the validation functions
   module.exports = {
     validatePANCard,
     validateAadhaarCard,
-    validateVoterIDCard
+    validateVoterIDCard,
+    validateDL
   };
